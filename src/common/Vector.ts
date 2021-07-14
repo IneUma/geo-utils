@@ -40,4 +40,16 @@ export default class Vector {
   set z(z: number) {
     this._z = z;
   }
+
+  add(vec: Vector) {
+    this._x += vec.x;
+    this._y += vec.y;
+    this._z += vec.z;
+  }
+
+  sub(vec: Vector) {
+    this._x -= vec.x;
+    this._y -= vec.y;
+    this._z -= vec.z;
+  }
 }
