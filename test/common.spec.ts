@@ -23,7 +23,7 @@ describe('ベクトル', () => {
     expect(vecA.y).toBe(-300);
   });
 
-  test('ベクトルの正規化', () => {
+  test('単位ベクトルを返す', () => {
     const vec = new Vector(3, 10);
     const norm = vec.normalize();
     expect(norm.x).toBe(0.2873478855663454);

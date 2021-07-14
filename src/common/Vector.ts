@@ -7,7 +7,6 @@ export default class Vector {
    *
    *
    * @constructor
-   * @see Interface
    * @version 1.0.0
    * -------------------------------------------------------------------------- */
   constructor(x: number, y: number) {
