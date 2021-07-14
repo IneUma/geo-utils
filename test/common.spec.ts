@@ -23,6 +23,13 @@ describe('ベクトル', () => {
     expect(vecA.y).toBe(-300);
   });
 
+  test('ベクトルの正規化', () => {
+    const vec = new Vector(3, 10);
+    const norm = vec.normalize();
+    expect(norm.x).toBe(0.2873478855663454);
+    expect(norm.y).toBe(0.9578262852211513);
+  });
+
   test('ベクトルの内積', () => {
     const vecA = new Vector(10, 0);
     const vecB = new Vector(0, 10);

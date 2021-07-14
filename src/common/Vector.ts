@@ -50,9 +50,16 @@ export default class Vector {
   }
 
   /**
+   * ベクトルを正規化して返す
+   */
+  normalize() {
+    const length = Math.sqrt(this._x ** 2 + this._y ** 2);
+    return { x: this._x / length, y: this._y / length };
+  }
+
+  /**
    * ベクトルの内積を返す
    * @param Vector
-   * @returns ラジアン
    */
   dot(vec: Vector) {
     return this._x * vec.x + this._y * vec.y;
