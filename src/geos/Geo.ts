@@ -2,7 +2,7 @@
  * GeoJson の種類の定義
  *
  *
- * @see Class
+ * @see Enum
  * @version 1.0.0
  * -------------------------------------------------------------------------- */
 export enum GeoJsonType {

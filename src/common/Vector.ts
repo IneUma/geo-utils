@@ -1,20 +1,17 @@
 export default class Vector {
   private _x: number;
   private _y: number;
-  private _z?: number;
 
   /**
    *
    *
    *
    * @constructor
-   * @see Interface
    * @version 1.0.0
    * -------------------------------------------------------------------------- */
-  constructor(x: number, y: number, z?: number) {
+  constructor(x: number, y: number) {
     this._x = x;
     this._y = y;
-    this._z = z;
   }
 
   get x() {
@@ -25,10 +22,6 @@ export default class Vector {
     return this._y;
   }
 
-  get z() {
-    return this._z;
-  }
-
   set x(x: number) {
     this._x = x;
   }
@@ -37,7 +30,37 @@ export default class Vector {
     this._y = y;
   }
 
-  set z(z: number) {
-    this._z = z;
+  /**
+   * ベクトルを加算した結果を返す
+   * @param Vector
+   */
+  add(vec: Vector) {
+    this._x += vec.x;
+    this._y += vec.y;
+  }
+
+  /**
+   * ベクトルを減算した結果を返す
+   * @param Vector
+   */
+  sub(vec: Vector) {
+    this._x -= vec.x;
+    this._y -= vec.y;
+  }
+
+  /**
+   * ベクトルを正規化して返す
+   */
+  normalize() {
+    const length = Math.sqrt(this._x ** 2 + this._y ** 2);
+    return { x: this._x / length, y: this._y / length };
+  }
+
+  /**
+   * ベクトルの内積を返す
+   * @param Vector
+   */
+  dot(vec: Vector) {
+    return this._x * vec.x + this._y * vec.y;
   }
 }
