@@ -14,7 +14,7 @@ export default class Vector {
   }
 
   get y() {
-    return this._x;
+    return this._y;
   }
 
   get z() {
