@@ -15,14 +15,9 @@ describe('Vector', () => {
     expect(vec.y).toBe(111);
   });
 
-  test('ベクトルを行列形式で取得', () => {
-    const vec = new Vector(100, 200);
-    expect(vec.toMatrix()).toMatchObject([[100, 200, 1]]);
-  });
-
   test('ベクトルを2次行列形式で取得', () => {
     const vec = new Vector(100, 200);
-    expect(vec.toMatrix2D()).toMatchObject([
+    expect(vec.toMatrix().data).toMatchObject([
       [100, 0, 0],
       [0, 200, 0],
       [0, 0, 1],

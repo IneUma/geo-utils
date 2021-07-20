@@ -1,3 +1,9 @@
+import { Vector } from '../../vector';
+
+/**
+ * @name Matrix2D
+ * @summary 2次行列の型
+ */
 export type Matrix2D = [[number, number, number], [number, number, number], [number, number, number]];
 
 /**
@@ -16,4 +22,12 @@ export default class Matrix {
   }
 
   set data(_matrix: Matrix2D) {}
+
+  /**
+   * ベクトルオブジェクトで返す
+   * @returns Vector
+   */
+  public toVector = (): Vector => {
+    return new Vector(this._matrix[0][0], this._matrix[1][1]);
+  };
 }
