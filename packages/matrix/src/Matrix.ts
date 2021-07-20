@@ -21,7 +21,9 @@ export default class Matrix {
     return this._matrix;
   }
 
-  set data(_matrix: Matrix2D) {}
+  set data(matrix: Matrix2D) {
+    this._matrix = matrix;
+  }
 
   /**
    * ベクトルオブジェクトで返す
