@@ -14,4 +14,9 @@ describe('Vector', () => {
     expect(vec.x).toBe(999);
     expect(vec.y).toBe(111);
   });
+
+  test('ベクトルを行列形式で取得', () => {
+    const vec = new Vector(100, 200);
+    expect(vec.matrix).toMatchObject([[100, 200, 1]]);
+  });
 });
