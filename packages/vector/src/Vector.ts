@@ -1,3 +1,7 @@
+/**
+ * @name Vector
+ * @summary ベクトルオブジェクト
+ */
 export default class Vector {
   private _x: number;
   private _y: number;
