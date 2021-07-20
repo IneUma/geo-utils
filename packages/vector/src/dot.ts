@@ -12,7 +12,6 @@ import Vector from './Vector';
  * const result = dot(new Vector(10, 20), new Vector(20, 10))
  */
 const dot = (vec1: Vector, vec2: Vector): number => {
-  console.log(vec1, vec2);
   return vec1.x * vec2.x + vec1.y * vec2.y;
 };
 
