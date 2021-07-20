@@ -17,6 +17,15 @@ describe('Vector', () => {
 
   test('ベクトルを行列形式で取得', () => {
     const vec = new Vector(100, 200);
-    expect(vec.matrix).toMatchObject([[100, 200, 1]]);
+    expect(vec.toMatrix()).toMatchObject([[100, 200, 1]]);
+  });
+
+  test('ベクトルを2次行列形式で取得', () => {
+    const vec = new Vector(100, 200);
+    expect(vec.toMatrix2D()).toMatchObject([
+      [100, 0, 0],
+      [0, 200, 0],
+      [0, 0, 1],
+    ]);
   });
 });

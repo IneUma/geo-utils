@@ -1,3 +1,5 @@
+import { Matrix2D } from '../../matrix';
+
 export type Matrix1D = [[number, number, number]];
 
 /**
@@ -27,7 +29,23 @@ export default class Vector {
     this._matrix[0][1] = y;
   }
 
-  get matrix() {
+  /**
+   * ベクトルを１次行列形式で返す
+   * @returns Matrix1D
+   */
+  public toMatrix = (): Matrix1D => {
     return this._matrix;
-  }
+  };
+
+  /**
+   * ベクトルを2次行列形式で返す
+   * @returns Matrix2D
+   */
+  public toMatrix2D = (): Matrix2D => {
+    return [
+      [this.x, 0, 0],
+      [0, this.y, 0],
+      [0, 0, 1],
+    ];
+  };
 }
